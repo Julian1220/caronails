@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export function Navbar() {
-  const brandBg = "#D2C5B9";
+  const brandBg = "rgb(210, 197, 186)";
   const headingPink = "#EA6E94";
   const phoneNumber = "+436781259086";
 

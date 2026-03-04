@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export function Footer() {
-  const brandBg = "#D2C5B9";
+  const brandBg = "rgb(210, 197, 186)";
   const headingPink = "#EA6E94";
 
   // Labels: 10px General Sans
