@@ -20,12 +20,15 @@ export function Navbar() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
     };
+
     const onClick = (e: MouseEvent) => {
       if (!headerRef.current) return;
       if (!headerRef.current.contains(e.target as Node)) setOpen(false);
     };
+
     document.addEventListener("keydown", onKey);
     document.addEventListener("mousedown", onClick);
+
     return () => {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("mousedown", onClick);
@@ -35,11 +38,11 @@ export function Navbar() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 w-full shadow-sm"
+      className="fixed top-0 left-0 z-50 w-full shadow-sm"
       style={{ backgroundColor: brandBg, ["--hp" as any]: headingPink }}>
       <nav className="w-full px-4 lg:px-10">
-        <div className="relative flex items-center justify-between h-16 md:h-20">
-          <div className="hidden lg:flex items-center gap-10">
+        <div className="relative flex h-16 items-center justify-between md:h-20">
+          <div className="hidden items-center gap-10 lg:flex">
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -63,7 +66,7 @@ export function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden lg:flex items-center">
+          <div className="hidden items-center lg:flex">
             <a
               href={`tel:${phoneNumber}`}
               className="inline-flex items-center justify-center rounded-full px-6 py-2 text-xs tracking-[0.22em] text-white transition hover:brightness-95"
@@ -72,7 +75,7 @@ export function Navbar() {
             </a>
           </div>
 
-          <div className="lg:hidden ml-auto flex items-center">
+          <div className="ml-auto flex items-center lg:hidden">
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
@@ -98,9 +101,9 @@ export function Navbar() {
 
         {open && (
           <div
-            className="lg:hidden border-t border-white/25"
+            className="border-t border-white/25 lg:hidden"
             style={{ backgroundColor: brandBg }}>
-            <div className="py-4 flex flex-col items-center text-center">
+            <div className="flex flex-col items-center py-4 text-center">
               {links.map((l) => (
                 <Link
                   key={l.href}
