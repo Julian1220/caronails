@@ -55,7 +55,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${generalSans.variable} antialiased min-h-screen flex flex-col`}>
         <Navbar />
-        <main className="flex-1 pt-10 pb-16">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
