@@ -147,26 +147,19 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="min-h-[340px] bg-[#c9beb3] md:min-h-[420px]">
-              <div className="grid h-full min-h-[340px] grid-rows-3 px-8 md:min-h-[420px] md:px-12 lg:px-16">
-                <div />
-                <div className="flex items-center">
-                  <div className="w-full">
-                    <h3 className="text-[1.55rem] font-bold leading-[1.04] tracking-[-0.03em] text-white md:text-[1.9rem]">
-                      Über mich
-                    </h3>
+            <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-16">
+              <div className="mx-auto max-w-[700px] text-center">
+                <h3 className="text-[1.4rem] font-bold leading-[1.1] tracking-[-0.03em] text-white md:text-[1.8rem]">
+                  Über mich
+                </h3>
 
-                    <p className="mt-4 text-[15px] font-normal leading-[1.38] tracking-[-0.015em] text-white/85 md:text-[15px]">
-                      Als Fußpflegerin lege ich besonderen Wert auf
-                      fachgerechte, hygienische und sorgfältige Behandlungen.
-                      Jede Behandlung wird individuell auf Ihre Bedürfnisse
-                      abgestimmt – für gesunde, gepflegte Füße und Nägel. Ihr
-                      Wohlbefinden und Ihre Fußgesundheit stehen dabei stets im
-                      Mittelpunkt.
-                    </p>
-                  </div>
-                </div>
-                <div />
+                <p className="mt-4 text-[15px] font-normal leading-[1.5] tracking-[-0.015em] text-white/85">
+                  Als Fußpflegerin lege ich besonderen Wert auf fachgerechte,
+                  hygienische und sorgfältige Behandlungen. Jede Behandlung wird
+                  individuell auf Ihre Bedürfnisse abgestimmt – für gesunde,
+                  gepflegte Füße und Nägel. Ihr Wohlbefinden und Ihre
+                  Fußgesundheit stehen dabei stets im Mittelpunkt.
+                </p>
               </div>
             </div>
           </div>
