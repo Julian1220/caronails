@@ -10,17 +10,16 @@ const italiana = Italiana({
 export default function HomePage() {
   return (
     <>
+      {/* Hero */}
       <section className="relative h-[calc(100vh-4rem)] w-full overflow-hidden md:h-[calc(100vh-5rem)]">
         <Image
-          src="/hero-img.avif"
+          src="/manicure-myservices.jpg"
           alt="Hero Image"
           fill
           priority
           className="object-cover"
         />
-
         <div className="absolute inset-0 bg-black/50" />
-
         <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
           <h1
             className={`${italiana.className} text-4xl text-white md:text-6xl lg:text-7xl`}>
@@ -29,9 +28,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f5f5f3] px-4 pt-24 pb-14 md:px-8 md:pt-32 md:pb-20 lg:px-12">
+      {/* Meine Leistungen */}
+      <section className="bg-[#f5f5f3] px-4 pt-14 pb-8 md:px-8 md:pt-16 md:pb-10 lg:px-12">
         <div className="mx-auto max-w-[1800px]">
-          <div className="mb-8 flex items-center justify-between gap-6 md:mb-10">
+          <div className="mb-6 flex items-center justify-between gap-6 md:mb-8">
             <h2
               className={`${italiana.className} text-[2rem] leading-none tracking-[-0.02em] text-black md:text-[3.4rem] lg:text-[4.2rem]`}
               style={{ textShadow: "0 0 0.35px rgba(0,0,0,0.55)" }}>
@@ -39,7 +39,7 @@ export default function HomePage() {
             </h2>
 
             <a
-              href="tel:+436781259086"
+              href="tel:+436764432882"
               className="hidden items-center justify-center self-center rounded-full bg-[#EA6E94] px-6 py-[5px] text-[10px] font-light tracking-[0.28em] text-white transition duration-200 hover:brightness-95 md:inline-flex">
               JETZT BUCHEN
             </a>
@@ -48,12 +48,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Link
               href="/manicure"
-              className="group relative h-[260px] overflow-hidden rounded-[1rem] md:h-[330px] lg:h-[360px]">
+              className="group relative h-[240px] overflow-hidden rounded-[1rem] md:h-[310px] lg:h-[340px]">
               <Image
-                src="/manicure.jpg"
+                src="/manicure-picture3.jpg"
                 alt="Manicure + Shellac"
                 fill
-                className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                className="object-cover object-[center_25%] transition duration-500 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-black/35" />
               <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
@@ -65,7 +65,7 @@ export default function HomePage() {
 
             <Link
               href="/pedicure"
-              className="group relative h-[260px] overflow-hidden rounded-[1rem] md:h-[330px] lg:h-[360px]">
+              className="group relative h-[240px] overflow-hidden rounded-[1rem] md:h-[310px] lg:h-[340px]">
               <Image
                 src="/pedicure.jpg"
                 alt="Pedicure"
@@ -81,9 +81,9 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-8 md:hidden">
+          <div className="mt-6 md:hidden">
             <a
-              href="tel:+436781259086"
+              href="tel:+436764432882"
               className="inline-flex items-center justify-center rounded-full bg-[#EA6E94] px-6 py-[5px] text-[10px] font-light tracking-[0.28em] text-white transition duration-200 hover:brightness-95">
               JETZT BUCHEN
             </a>
@@ -91,38 +91,83 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f5f5f3] px-4 pb-14 md:px-8 md:pb-20 lg:px-12">
+      {/* Feature Widget */}
+      <section className="bg-[#f5f5f3] px-4 pb-8 md:px-8 md:pb-10 lg:px-12">
         <div className="mx-auto max-w-[1800px] overflow-hidden rounded-[1rem]">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex min-h-[420px] items-center bg-[#c9beb3] px-8 py-12 md:min-h-[520px] md:px-14 lg:px-16">
-              <div className="max-w-[620px]">
-                <h3 className="text-3xl font-semibold leading-tight text-white md:text-5xl">
-                  Perfekte Nägel, stilvoll bis ins Detail
-                </h3>
+            <div className="min-h-[340px] bg-[#c9beb3] md:min-h-[420px]">
+              <div className="grid h-full min-h-[340px] grid-rows-3 px-8 md:min-h-[420px] md:px-12 lg:px-16">
+                <div />
+                <div className="flex items-center">
+                  <div className="w-full">
+                    <h3 className="text-[1.55rem] font-bold leading-[1.04] tracking-[-0.03em] text-white md:text-[1.9rem]">
+                      Gepflegte Nägel, die ruhig und hochwertig wirken
+                    </h3>
 
-                <p className="mt-6 max-w-[620px] text-base leading-8 text-white/85 md:text-[1.15rem]">
-                  Bei uns stehen Präzision, Ästhetik und hochwertige Pflege im
-                  Mittelpunkt. Ob natürlicher Look, elegante Verstärkung oder
-                  modernes Design – wir gestalten Nägel, die deinen Stil
-                  unterstreichen und gleichzeitig gepflegt, hochwertig und
-                  zeitlos wirken.
-                </p>
+                    <p className="mt-4 text-[15px] font-normal leading-[1.38] tracking-[-0.015em] text-white/85 md:text-[15px]">
+                      Individuelle Pflege, saubere Technik und Ergebnisse, die
+                      überzeugen. Ob natürlich oder modern – jede Behandlung
+                      wird sorgfältig auf Sie abgestimmt, damit Ihre Nägel nicht
+                      nur schön aussehen, sondern sich auch gesund anfühlen.
+                    </p>
 
-                <a
-                  href="tel:+436781259086"
-                  className="mt-8 inline-flex items-center justify-center rounded-full bg-[#EA6E94] px-10 py-3 text-sm tracking-[0.16em] text-white transition hover:brightness-95">
-                  BOOK NOW
-                </a>
+                    <a
+                      href="tel:+436781259086"
+                      className="mt-5 inline-flex items-center justify-center rounded-full bg-[#EA6E94] px-6 py-[5px] text-[10px] font-light tracking-[0.28em] text-white transition duration-200 hover:brightness-95">
+                      JETZT BUCHEN
+                    </a>
+                  </div>
+                </div>
+                <div />
               </div>
             </div>
 
-            <div className="relative min-h-[420px] md:min-h-[520px]">
+            <div className="relative min-h-[340px] md:min-h-[420px]">
               <Image
-                src="/service-feature.jpg"
+                src="/manicure-picture2.jpg"
                 alt="Elegante Nägel"
+                fill
+                className="object-cover object-[center_80%]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Über mich Widget */}
+      <section className="bg-[#f5f5f3] px-4 pb-10 md:px-8 md:pb-12 lg:px-12">
+        <div className="mx-auto max-w-[1800px] overflow-hidden rounded-[1rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="relative min-h-[340px] md:min-h-[420px]">
+              <Image
+                src="/portrait.jpg"
+                alt="Portrait"
                 fill
                 className="object-cover"
               />
+            </div>
+
+            <div className="min-h-[340px] bg-[#c9beb3] md:min-h-[420px]">
+              <div className="grid h-full min-h-[340px] grid-rows-3 px-8 md:min-h-[420px] md:px-12 lg:px-16">
+                <div />
+                <div className="flex items-center">
+                  <div className="w-full">
+                    <h3 className="text-[1.55rem] font-bold leading-[1.04] tracking-[-0.03em] text-white md:text-[1.9rem]">
+                      Über mich
+                    </h3>
+
+                    <p className="mt-4 text-[15px] font-normal leading-[1.38] tracking-[-0.015em] text-white/85 md:text-[15px]">
+                      Als Fußpflegerin lege ich besonderen Wert auf
+                      fachgerechte, hygienische und sorgfältige Behandlungen.
+                      Jede Behandlung wird individuell auf Ihre Bedürfnisse
+                      abgestimmt – für gesunde, gepflegte Füße und Nägel. Ihr
+                      Wohlbefinden und Ihre Fußgesundheit stehen dabei stets im
+                      Mittelpunkt.
+                    </p>
+                  </div>
+                </div>
+                <div />
+              </div>
             </div>
           </div>
         </div>

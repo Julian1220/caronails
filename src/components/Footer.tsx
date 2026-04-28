@@ -6,15 +6,14 @@ import type { ReactNode } from "react";
 export function Footer() {
   const brandBg = "rgb(210, 197, 186)";
   const headingPink = "#EA6E94";
+  const phoneNumber = "+436764432882";
 
-  // Labels: 10px General Sans
   const labelStyle = {
     fontFamily:
       "var(--font-general-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
     fontSize: "10px",
   } as const;
 
-  // Links: 15px Rubik
   const linkStyle = {
     fontFamily:
       "var(--font-rubik), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
@@ -22,41 +21,17 @@ export function Footer() {
   } as const;
 
   return (
-    <footer className="bg-white m-0 p-0">
-      <style jsx global>{`
-        @keyframes patternMarquee {
-          0% {
-            background-position: 0 0;
-          }
-          100% {
-            background-position: -960px 0;
-          }
-        }
-        .pattern-marquee {
-          animation: patternMarquee 35s linear infinite;
-          will-change: background-position;
-        }
-      `}</style>
-
-      <div className="w-full px-2 sm:px-4 lg:px-6 m-0 pb-0">
+    <footer className="bg-[#f5f5f3] m-0 p-0">
+      <div className="mx-auto max-w-[1800px] px-4 md:px-8 lg:px-12 pb-6 md:pb-8">
         <div
-          className="relative mt-0 mb-0 overflow-hidden rounded-t-3xl rounded-b-none text-white shadow-sm ring-1 ring-black/5"
+          className="relative overflow-hidden rounded-[1rem] text-white shadow-sm ring-1 ring-black/5"
           style={{ backgroundColor: brandBg }}>
-          <div
-            className="border-b border-white/25 pattern-marquee"
-            style={{
-              backgroundColor: brandBg,
-              backgroundImage: "url('/logo_marquee.png')",
-              backgroundRepeat: "repeat",
-              backgroundSize: "180px 180px",
-            }}>
-            <div className="h-[140px] md:h-[200px] lg:h-[220px]" />
+          <div className="border-b border-white/25">
+            <div className="h-10 md:h-14" />
           </div>
 
           <div className="px-6 py-10 md:px-10 md:py-12">
-            {/* Handy: 2 Spalten | ab md: 4 Spalten */}
-            <div className="grid gap-10 grid-cols-2 md:grid-cols-4">
-              {/* Menü */}
+            <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
               <div>
                 <p
                   className="uppercase tracking-[0.2em] leading-none"
@@ -82,17 +57,16 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link
+                    <a
                       className="hover:text-white"
                       style={linkStyle}
-                      href="/#book">
-                      Book Now
-                    </Link>
+                      href={`tel:${phoneNumber}`}>
+                      Jetzt Buchen
+                    </a>
                   </li>
                 </ul>
               </div>
 
-              {/* Navigation */}
               <div>
                 <p
                   className="uppercase tracking-[0.2em] leading-none"
@@ -117,18 +91,10 @@ export function Footer() {
                       Impressum
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      className="hover:text-white"
-                      style={linkStyle}
-                      href="/agbs">
-                      AGBs
-                    </Link>
-                  </li>
+                  
                 </ul>
               </div>
 
-              {/* Kontakt */}
               <div>
                 <p
                   className="uppercase tracking-[0.2em] leading-none"
@@ -146,8 +112,8 @@ export function Footer() {
                     <a
                       className="mt-2 block font-semibold text-white hover:opacity-90"
                       style={linkStyle}
-                      href="tel:+43">
-                      +43 678 12590 86
+                      href={`tel:${phoneNumber}`}>
+                      +43 676 4432882
                     </a>
                   </div>
 
@@ -161,7 +127,7 @@ export function Footer() {
                       className="mt-2 block font-semibold text-white hover:opacity-90"
                       style={linkStyle}
                       href="mailto:hello@example.com">
-                      hello@example.com
+                      caroline.damon@icloud.com
                     </a>
                   </div>
 
@@ -174,13 +140,12 @@ export function Footer() {
                     <p
                       className="mt-2 font-semibold text-white"
                       style={linkStyle}>
-                      Caro 101, 1220 Wien
+                      Wagramer Straße 61/9/1, 1220 Wien
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Öffnungszeiten */}
               <div>
                 <p
                   className="uppercase tracking-[0.2em] leading-none"
