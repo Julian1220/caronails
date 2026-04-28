@@ -136,33 +136,18 @@ export default function HomePage() {
 
       {/* Über mich Widget */}
       <section className="bg-[#f5f5f3] px-4 pb-10 md:px-8 md:pb-12 lg:px-12">
-        <div className="mx-auto max-w-[1800px] overflow-hidden rounded-[1rem]">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="relative min-h-[340px] md:min-h-[420px]">
-              <Image
-                src="/portrait.jpg"
-                alt="Portrait"
-                fill
-                className="object-cover"
-              />
-            </div>
+        <div className="mx-auto max-w-[900px] rounded-[1rem] bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-16 text-center">
+          <h3 className="text-[1.4rem] font-bold leading-[1.1] tracking-[-0.03em] text-white md:text-[1.8rem]">
+            Über mich
+          </h3>
 
-            <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-16">
-              <div className="mx-auto max-w-[700px] text-center">
-                <h3 className="text-[1.4rem] font-bold leading-[1.1] tracking-[-0.03em] text-white md:text-[1.8rem]">
-                  Über mich
-                </h3>
-
-                <p className="mt-4 text-[15px] font-normal leading-[1.5] tracking-[-0.015em] text-white/85">
-                  Als Fußpflegerin lege ich besonderen Wert auf fachgerechte,
-                  hygienische und sorgfältige Behandlungen. Jede Behandlung wird
-                  individuell auf Ihre Bedürfnisse abgestimmt – für gesunde,
-                  gepflegte Füße und Nägel. Ihr Wohlbefinden und Ihre
-                  Fußgesundheit stehen dabei stets im Mittelpunkt.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="mt-4 text-[15px] font-normal leading-[1.5] tracking-[-0.015em] text-white/85">
+            Als Fußpflegerin lege ich besonderen Wert auf fachgerechte,
+            hygienische und sorgfältige Behandlungen. Jede Behandlung wird
+            individuell auf Ihre Bedürfnisse abgestimmt – für gesunde, gepflegte
+            Füße und Nägel. Ihr Wohlbefinden und Ihre Fußgesundheit stehen dabei
+            stets im Mittelpunkt.
+          </p>
         </div>
       </section>
     </>
