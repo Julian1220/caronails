@@ -1,10 +1,19 @@
-import { Italiana } from "next/font/google";
+import { Italiana, Playfair_Display, DM_Sans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
 const italiana = Italiana({
   subsets: ["latin"],
   weight: "400",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
 });
 
 export default function HomePage() {
@@ -19,28 +28,29 @@ export default function HomePage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/45" />
+
         <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
           <h1
-            className={`${italiana.className} text-4xl text-white md:text-6xl lg:text-7xl`}>
+            className={`${playfair.className} text-[2.6rem] leading-[1.05] text-white md:text-[4.5rem] lg:text-[5.5rem] tracking-[-0.03em]`}>
             Das Beste für deine Nägel und dich
           </h1>
         </div>
       </section>
 
       {/* Meine Leistungen */}
-      <section className="bg-[#f5f5f3] px-4 pt-14 pb-8 md:px-8 md:pt-16 md:pb-10 lg:px-12">
+      <section className="bg-[#f5f5f3] px-4 pt-14 pb-6 md:px-8 md:pt-16 md:pb-8 lg:px-12 lg:pt-24 lg:pb-10">
+        {" "}
         <div className="mx-auto max-w-[1800px]">
-          <div className="mb-6 flex items-center justify-between gap-6 md:mb-8">
+          <div className="mb-8 flex items-end justify-between">
             <h2
-              className={`${italiana.className} text-[2rem] leading-none tracking-[-0.02em] text-black md:text-[3.4rem] lg:text-[4.2rem]`}
-              style={{ textShadow: "0 0 0.35px rgba(0,0,0,0.55)" }}>
+              className={`${playfair.className} text-[2.4rem] md:text-[3.6rem] lg:text-[4.4rem] leading-[1.05] tracking-[-0.03em] text-black`}>
               Meine Leistungen
             </h2>
 
             <a
               href="tel:+436764432882"
-              className="hidden items-center justify-center self-center rounded-full bg-[#EA6E94] px-6 py-[5px] text-[10px] font-light tracking-[0.28em] text-white transition duration-200 hover:brightness-95 md:inline-flex">
+              className="hidden md:inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[11px] tracking-[0.25em] text-white hover:brightness-95">
               JETZT BUCHEN
             </a>
           </div>
@@ -48,16 +58,19 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Link
               href="/manicure"
-              className="group relative h-[240px] overflow-hidden rounded-[1rem] md:h-[310px] lg:h-[340px]">
+              className="group relative h-[260px] md:h-[340px] lg:h-[380px] overflow-hidden rounded-2xl">
               <Image
                 src="/manicure-picture3.jpg"
                 alt="Manicure + Shellac"
                 fill
                 className="object-cover object-[center_25%] transition duration-500 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-black/35" />
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                <h3 className="text-[15px] font-medium tracking-[0.03em] text-white md:text-[17px]">
+
+              <div className="absolute inset-0 bg-black/30" />
+
+              <div className="absolute bottom-0 p-6">
+                <h3
+                  className={`${dmSans.className} text-[16px] md:text-[18px] tracking-[0.02em] text-white`}>
                   MANICURE + SHELLAC
                 </h3>
               </div>
@@ -65,16 +78,19 @@ export default function HomePage() {
 
             <Link
               href="/pedicure"
-              className="group relative h-[240px] overflow-hidden rounded-[1rem] md:h-[310px] lg:h-[340px]">
+              className="group relative h-[260px] md:h-[340px] lg:h-[380px] overflow-hidden rounded-2xl">
               <Image
                 src="/pedicure.jpg"
                 alt="Pedicure"
                 fill
                 className="object-cover transition duration-500 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-black/35" />
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                <h3 className="text-[15px] font-medium tracking-[0.03em] text-white md:text-[17px]">
+
+              <div className="absolute inset-0 bg-black/30" />
+
+              <div className="absolute bottom-0 p-6">
+                <h3
+                  className={`${dmSans.className} text-[16px] md:text-[18px] tracking-[0.02em] text-white`}>
                   PEDICURE
                 </h3>
               </div>
@@ -84,7 +100,7 @@ export default function HomePage() {
           <div className="mt-6 md:hidden">
             <a
               href="tel:+436764432882"
-              className="inline-flex items-center justify-center rounded-full bg-[#EA6E94] px-6 py-[5px] text-[10px] font-light tracking-[0.28em] text-white transition duration-200 hover:brightness-95">
+              className="inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[11px] tracking-[0.25em] text-white">
               JETZT BUCHEN
             </a>
           </div>
@@ -92,42 +108,40 @@ export default function HomePage() {
       </section>
 
       {/* Feature Widget */}
-      <section className="bg-[#f5f5f3] px-4 pb-8 md:px-8 md:pb-10 lg:px-12">
-        <div className="mx-auto max-w-[1800px] overflow-hidden rounded-[1rem]">
+      <section className="bg-[#f5f5f3] px-4 pt-6 pb-10 md:px-8 md:pt-8 md:pb-12 lg:px-12 lg:pt-10 lg:pb-16">
+        {" "}
+        <div className="mx-auto max-w-[1800px] overflow-hidden rounded-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="min-h-[340px] bg-[#c9beb3] md:min-h-[420px]">
-              <div className="grid h-full min-h-[340px] grid-rows-3 px-8 md:min-h-[420px] md:px-12 lg:px-16">
-                <div />
-                <div className="flex items-center">
-                  <div className="w-full">
-                    <h3 className="text-[1.55rem] font-bold leading-[1.04] tracking-[-0.03em] text-white md:text-[1.9rem]">
-                      Gepflegte Nägel, die ruhig und hochwertig wirken
-                    </h3>
+            {/* TEXT */}
+            <div className="flex items-center bg-[#c9beb3]">
+              <div className="mx-auto w-full max-w-[560px] px-6 py-14 md:px-10 md:py-20 lg:px-16">
+                <h3
+                  className={`${playfair.className} text-[2.2rem] md:text-[3rem] lg:text-[3.6rem] leading-[1.05] text-white`}>
+                  Gepflegte Nägel, die ruhig und hochwertig wirken
+                </h3>
 
-                    <p className="mt-4 text-[15px] font-normal leading-[1.38] tracking-[-0.015em] text-white/85 md:text-[15px]">
-                      Individuelle Pflege, saubere Technik und Ergebnisse, die
-                      überzeugen. Ob natürlich oder modern – jede Behandlung
-                      wird sorgfältig auf Sie abgestimmt, damit Ihre Nägel nicht
-                      nur schön aussehen, sondern sich auch gesund anfühlen.
-                    </p>
+                <p
+                  className={`${dmSans.className} mt-6 text-[16.5px] md:text-[18px] leading-[1.6] text-white/90`}>
+                  Individuelle Pflege, saubere Technik und Ergebnisse, die
+                  überzeugen. Ob natürlich oder modern – jede Behandlung wird
+                  sorgfältig auf Sie abgestimmt.
+                </p>
 
-                    <a
-                      href="tel:+436781259086"
-                      className="mt-5 inline-flex items-center justify-center rounded-full bg-[#EA6E94] px-6 py-[5px] text-[10px] font-light tracking-[0.28em] text-white transition duration-200 hover:brightness-95">
-                      JETZT BUCHEN
-                    </a>
-                  </div>
-                </div>
-                <div />
+                <a
+                  href="tel:+436781259086"
+                  className="mt-8 inline-flex rounded-full bg-[#EA6E94] px-8 py-2.5 text-[11px] tracking-[0.25em] text-white hover:brightness-95">
+                  JETZT BUCHEN
+                </a>
               </div>
             </div>
 
-            <div className="relative min-h-[340px] md:min-h-[420px]">
+            {/* IMAGE */}
+            <div className="relative h-[340px] md:h-[450px] lg:h-auto">
               <Image
                 src="/manicure-picture2.jpg"
                 alt="Elegante Nägel"
                 fill
-                className="object-cover object-[center_80%]"
+                className="object-cover object-[center_75%]"
               />
             </div>
           </div>

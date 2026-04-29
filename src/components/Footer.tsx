@@ -91,7 +91,6 @@ export function Footer() {
                       Impressum
                     </Link>
                   </li>
-                  
                 </ul>
               </div>
 
@@ -161,9 +160,7 @@ export function Footer() {
 
           <div className="border-t border-white/25 px-6 py-6 md:px-10">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-3">
-                <p style={linkStyle}>CARO</p>
-              </div>
+              <div className="flex items-center gap-3"></div>
 
               <p
                 className="text-center text-white/85 sm:text-left"
@@ -171,33 +168,7 @@ export function Footer() {
                 © 2026 Caroline Damon
               </p>
 
-              <div className="flex justify-center gap-5 sm:justify-end">
-                <SocialIcon href="https://instagram.com" label="Instagram">
-                  <path
-                    d="M8 12.1c0 2.2 1.8 3.9 4 3.9s4-1.7 4-3.9S14.2 8.2 12 8.2s-4 1.7-4 3.9Z"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  />
-                  <path
-                    d="M16.6 3.8H7.4A3.6 3.6 0 0 0 3.8 7.4v9.2a3.6 3.6 0 0 0 3.6 3.6h9.2a3.6 3.6 0 0 0 3.6-3.6V7.4a3.6 3.6 0 0 0-3.6-3.6Z"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  />
-                  <path
-                    d="M17.2 6.7h.01"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </SocialIcon>
-
-                <SocialIcon href="https://tiktok.com" label="TikTok">
-                  <path
-                    d="M14 4v10.2a2.8 2.8 0 1 1-2.2-2.7V8.7a6 6 0 1 0 5.8 6V9.2c1 .8 2.2 1.3 3.4 1.4V7.8c-1.8-.2-3.2-1.6-3.6-3.8H14Z"
-                    fill="currentColor"
-                  />
-                </SocialIcon>
-              </div>
+              <div className="flex justify-center gap-5 sm:justify-end"></div>
             </div>
           </div>
         </div>
