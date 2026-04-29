@@ -20,15 +20,15 @@ function ServiceBlock({
 }) {
   return (
     <div className="space-y-2 pb-4 last:pb-0">
-      <h3 className="font-sans text-[17px] md:text-[19px] font-medium text-white">
+      <h3 className="font-sans text-[18px] md:text-[19px] font-medium text-white">
         {title}
       </h3>
 
-      <div className="font-sans text-[12px] text-white/85 tracking-[0.02em]">
+      <div className="font-sans text-[12px] tracking-[0.02em] text-white/85">
         {meta.join(" · ")}
       </div>
 
-      <ul className="mt-2 grid grid-cols-1 gap-y-1 text-[13px] leading-[1.5] text-white/80 lg:grid-cols-2">
+      <ul className="mt-2 grid grid-cols-1 gap-y-1 text-[13.5px] md:text-[14px] leading-[1.5] text-white/80 lg:grid-cols-2">
         {lines.map((line) => (
           <li key={line} className="flex items-start gap-2">
             <span className="mt-[6px] h-[4px] w-[4px] shrink-0 rounded-full bg-white/70" />
@@ -77,10 +77,11 @@ export default function PedicurePage() {
           </h2>
         </section>
 
-        {/* MAIN 1 */}
-        <section className="pb-8 md:pb-10">
+        {/* MAIN 1 (FIXED - NO CUTTING) */}
+        <section className="pb-10">
           <div className="overflow-hidden rounded-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[82vh]">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* IMAGE */}
               <div className="relative h-[360px] md:h-[420px] lg:h-auto">
                 <Image
                   src="/pedicure-picture1.jpeg"
@@ -90,9 +91,10 @@ export default function PedicurePage() {
                 />
               </div>
 
+              {/* TEXT */}
               <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
-                <div className="flex h-full items-center">
-                  <div className="space-y-6">
+                <div className="flex h-full items-start">
+                  <div className="space-y-6 w-full">
                     <ServiceBlock
                       title="Klassische Fußpflege"
                       meta={["Preis: € 51", "ca. 45 Minuten"]}
@@ -135,20 +137,21 @@ export default function PedicurePage() {
         </section>
 
         {/* MAIN 2 */}
-        <section className="pb-8 md:pb-10">
+        <section className="pb-10">
           <div className="overflow-hidden rounded-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[72vh]">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* TEXT */}
               <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
-                <div className="flex h-full items-center">
+                <div className="flex h-full items-start">
                   <div className="space-y-6">
                     <ServiceBlock
                       title="Fußpflege mit erhöhtem Aufwand"
                       meta={["Preis: € 62", "ca. 60 Minuten"]}
                       lines={[
-                        "Diese Behandlung ist für Füße mit stark ausgeprägten Problemstellungen, bei denen ein erhöhter Zeit und Pflegeaufwand erforderlich ist.",
-                        "Angenehmes Fußbad",
-                        "Behandlung ausgeprägter Druckstellen und Hühneraugen",
-                        "Fachgerechte Behandlung stark eingewachsener oder stark verdickter Nägel",
+                        "Intensive Problembehandlung der Füße",
+                        "Starke Hornhaut",
+                        "Druckstellen & Hühneraugen",
+                        "Nagelkorrektur bei starken Problemen",
                         "Pflegende Abschlusspflege",
                       ]}
                     />
@@ -156,11 +159,11 @@ export default function PedicurePage() {
                     <div className="h-px w-full bg-white/15" />
 
                     <div>
-                      <h3 className="font-sans text-[16px] text-white">
+                      <h3 className="font-sans text-[18px] md:text-[19px] font-medium text-white">
                         Zusatzleistungen
                       </h3>
 
-                      <ul className="mt-3 space-y-2 text-[13px] text-white/80">
+                      <ul className="mt-3 space-y-2 text-[13.5px] md:text-[14px] text-white/80">
                         {pedicureAddOns.map((a) => (
                           <li key={a.title} className="flex gap-2">
                             <span className="mt-[6px] h-[4px] w-[4px] rounded-full bg-white/70" />
@@ -181,6 +184,7 @@ export default function PedicurePage() {
                 </div>
               </div>
 
+              {/* IMAGE */}
               <div className="relative h-[300px] md:h-[380px] lg:h-auto">
                 <Image
                   src="/pedicure-myservices3.jpg"
@@ -190,6 +194,47 @@ export default function PedicurePage() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="bg-[#c9beb3] mt-8 rounded-2xl px-6 py-10 md:px-10 md:py-12 lg:px-12">
+          <div className="mb-6 flex items-center justify-between">
+            <h2 className="font-serif text-[2rem] md:text-[3rem] text-white">
+              Weitere Behandlungen
+            </h2>
+
+            <a
+              href="tel:+436764432882"
+              className="hidden md:inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[10px] tracking-[0.25em] text-white">
+              JETZT BUCHEN
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Link
+              href="/manicure"
+              className="relative h-[260px] overflow-hidden rounded-2xl">
+              <Image
+                src="/manicure-picture3.jpg"
+                alt=""
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute bottom-0 p-5 text-white font-sans">
+                MANICURE + SHELLAC
+              </div>
+            </Link>
+
+            <Link
+              href="/pedicure"
+              className="relative h-[260px] overflow-hidden rounded-2xl">
+              <Image src="/pedicure.jpg" alt="" fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute bottom-0 p-5 text-white font-sans">
+                PEDICURE
+              </div>
+            </Link>
           </div>
         </section>
       </div>
