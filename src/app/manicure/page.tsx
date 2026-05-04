@@ -12,7 +12,7 @@ const manicureAndShellacServices = [
     title: "Shellac – Lackierung neu",
     bullets: ["Preis: € 39"],
     description:
-      "Für langanhaltenden Glanz und ein makelloses Ergebnis. Perfekt, wenn Sie sich eine elegante Farbe mit besonders sauberem Finish wünschen.",
+      "Eine Vielfalt an Farben, perfekter Halt ein makelloses Ergebnis - für Nägel, die lange schön bleiben.",
   },
   {
     title: "Shellac – entfernen & erneuern",
@@ -30,7 +30,7 @@ const manicureAndShellacServices = [
     title: "Entfernen des Shellacs",
     bullets: ["Preis: € 29"],
     description:
-      "Schonendes Entfernen mit gepflegtem Abschluss – die Nägel fühlen sich sauber und bereit für den nächsten Look an.",
+      "Schonendes Entfernen des Shellacs, inklusive Kürzen und Formen der Nägel. Zum Abschluss Nagelhärter und eine  Abschlusspflege.",
   },
 ];
 
