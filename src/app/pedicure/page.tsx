@@ -28,7 +28,7 @@ function ServiceBlock({
         {meta.join(" · ")}
       </div>
 
-      <ul className="mt-2 grid grid-cols-1 gap-y-1 text-[13.5px] md:text-[14px] leading-[1.5] text-white/80 lg:grid-cols-2">
+      <ul className="mt-2 grid grid-cols-1 gap-y-1 gap-x-14 text-[13.5px] md:text-[14px] leading-[1.5] text-white/80 lg:grid-cols-2">
         {lines.map((line) => (
           <li key={line} className="flex items-start gap-2">
             <span className="mt-[6px] h-[4px] w-[4px] shrink-0 rounded-full bg-white/70" />
@@ -50,10 +50,11 @@ export default function PedicurePage() {
         <section className="relative overflow-hidden rounded-2xl">
           <div className="relative h-[230px] md:h-[300px] lg:h-[340px]">
             <Image
-              src="/pedicure.jpg"
-              alt="Pedicure"
+              src="/pedicure-myservices3.webp"
+              alt="Elegante Nägel"
               fill
-              className="object-cover"
+              sizes="100vw"
+              className="object-cover object-[center_75%]"
               priority
             />
             <div className="absolute inset-0 bg-black/25" />
@@ -139,7 +140,7 @@ export default function PedicurePage() {
         {/* MAIN 2 */}
         <section className="pb-10">
           <div className="overflow-hidden rounded-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="grid grid-cols-1">
               {/* TEXT */}
               <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
                 <div className="flex h-full items-start">
@@ -183,16 +184,6 @@ export default function PedicurePage() {
                   </div>
                 </div>
               </div>
-
-              {/* IMAGE */}
-              <div className="relative h-[300px] md:h-[380px] lg:h-auto">
-                <Image
-                  src="/pedicure-myservices3.jpg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-              </div>
             </div>
           </div>
         </section>
@@ -218,7 +209,7 @@ export default function PedicurePage() {
                 src="/manicure-picture3.jpg"
                 alt=""
                 fill
-                className="object-cover"
+                className="object-cover object-[center_25%]"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute bottom-0 p-5 text-white font-sans">
@@ -229,7 +220,12 @@ export default function PedicurePage() {
             <Link
               href="/pedicure"
               className="relative h-[260px] overflow-hidden rounded-2xl">
-              <Image src="/pedicure.jpg" alt="" fill className="object-cover" />
+              <Image
+                src="/pedicure-myservices3.jpg"
+                alt=""
+                fill
+                className="object-cover object-[center_80%]"
+              />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute bottom-0 p-5 text-white font-sans">
                 PEDICURE

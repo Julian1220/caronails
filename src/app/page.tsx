@@ -33,7 +33,7 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
           <h1
             className={`${playfair.className} text-[2.6rem] leading-[1.05] text-white md:text-[4.5rem] lg:text-[5.5rem] tracking-[-0.03em]`}>
-            Das Beste für deine Nägel und dich
+            Das Beste für deine Hände, Füße und dich
           </h1>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function HomePage() {
               href="/pedicure"
               className="group relative h-[260px] md:h-[340px] lg:h-[380px] overflow-hidden rounded-2xl">
               <Image
-                src="/pedicure.jpg"
+                src="/pedicure-myservices3.jpg"
                 alt="Pedicure"
                 fill
                 className="object-cover transition duration-500 group-hover:scale-[1.03]"
@@ -115,16 +115,14 @@ export default function HomePage() {
             {/* TEXT */}
             <div className="flex items-center bg-[#c9beb3]">
               <div className="mx-auto w-full max-w-[560px] px-6 py-14 md:px-10 md:py-20 lg:px-16">
-                <h3
-                  className={`${playfair.className} text-[2.2rem] md:text-[3rem] lg:text-[3.6rem] leading-[1.05] text-white`}>
-                  Gepflegte Nägel, die ruhig und hochwertig wirken
-                </h3>
-
                 <p
                   className={`${dmSans.className} mt-6 text-[16.5px] md:text-[18px] leading-[1.6] text-white/90`}>
                   Individuelle Pflege, saubere Technik und Ergebnisse, die
                   überzeugen. Ob natürlich oder modern – jede Behandlung wird
-                  sorgfältig auf Sie abgestimmt.
+                  sorgfältig auf Sie abgestimmt, mit einem klaren Fokus auf
+                  Hygiene, Präzision und Qualität, damit Ihre Nägel nicht nur
+                  schön aussehen, sondern sich auch gepflegt und gesund
+                  anfühlen.
                 </p>
 
                 <a
@@ -138,10 +136,12 @@ export default function HomePage() {
             {/* IMAGE */}
             <div className="relative h-[340px] md:h-[450px] lg:h-auto">
               <Image
-                src="/manicure-picture2.jpg"
+                src="/pedicure-page.webp"
                 alt="Elegante Nägel"
                 fill
+                sizes="100vw"
                 className="object-cover object-[center_75%]"
+                priority
               />
             </div>
           </div>

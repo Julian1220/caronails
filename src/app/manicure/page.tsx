@@ -6,7 +6,7 @@ const manicureAndShellacServices = [
     title: "Maniküre",
     bullets: ["Preis: € 36"],
     description:
-      "Klassische, präzise Pflege für sauber geformte Nägel und ein gepflegtes Gesamtbild. Ideal für einen natürlichen Look mit ruhigem, hochwertigem Finish.",
+      "Nägel werden in Form gebracht, die Hände in einem entspannenden Handbad verwöhnt und anschließend die Nagelhaut sanft entfernt. Eine abschließende Pflege sorgt für ein geschmeidiges, gepflegtes Hautgefühl.",
   },
   {
     title: "Shellac – Lackierung neu",
@@ -24,7 +24,7 @@ const manicureAndShellacServices = [
     title: "Trockene Maniküre vor Shellac",
     bullets: ["Aufpreis: + € 19"],
     description:
-      "Optimale Vorbereitung für ein besonders präzises Ergebnis mit sauberer Nagelhaut und perfekter Form.",
+      "Nägel werden gekürzt, in Form gefeilt und die Nagelhaut sanft entfernt.  Ohne Handbad – für eine optimale Vorbereitung und bessere Haltbarkeit von Shellac.",
   },
   {
     title: "Entfernen des Shellacs",
@@ -74,7 +74,7 @@ export default function ManicurePage() {
           <div className="overflow-hidden rounded-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* IMAGE */}
-              <div className="relative h-[380px] md:h-[520px] lg:h-[640px]">
+              <div className="relative h-[360px] md:h-[420px] lg:h-auto">
                 <Image
                   src="/manicure-picture1.jpg"
                   alt="Maniküre Leistungen"
@@ -85,27 +85,28 @@ export default function ManicurePage() {
 
               {/* TEXT */}
               <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
-                <div className="flex h-full items-center">
-                  <div className="w-full space-y-6">
+                <div className="flex h-full items-start">
+                  <div className="space-y-6 w-full">
                     {manicureAndShellacServices.map((service) => (
-                      <div key={service.title} className="space-y-2">
+                      <div key={service.title}>
                         {/* TITLE */}
                         <h3 className="font-sans text-[18px] md:text-[19px] font-medium text-white">
                           {service.title}
                         </h3>
 
-                        {/* PRICE */}
-                        <div className="font-sans text-[12px] tracking-[0.02em] text-white/85">
+                        {/* BULLETS */}
+                        <div className="font-sans text-[12px] tracking-[0.02em] text-white/85 mt-2">
                           {service.bullets.join(" · ")}
                         </div>
 
                         {/* DESCRIPTION */}
-                        <p className="font-sans text-[13.5px] md:text-[14px] leading-[1.5] text-white/80">
+                        <p className="font-sans text-[13.5px] md:text-[14px] leading-[1.5] text-white/80 mt-2">
                           {service.description}
                         </p>
                       </div>
                     ))}
 
+                    {/* BUTTON */}
                     <a
                       href="tel:+436764432882"
                       className="inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[11px] tracking-[0.25em] text-white hover:brightness-95">
@@ -140,7 +141,7 @@ export default function ManicurePage() {
                 src="/manicure-picture3.jpg"
                 alt=""
                 fill
-                className="object-cover"
+                className="object-cover object-[center_25%]"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute bottom-0 p-5 text-white font-sans">
@@ -151,7 +152,12 @@ export default function ManicurePage() {
             <Link
               href="/pedicure"
               className="relative h-[260px] overflow-hidden rounded-2xl">
-              <Image src="/pedicure.jpg" alt="" fill className="object-cover" />
+              <Image
+                src="/pedicure-myservices3.jpg"
+                alt=""
+                fill
+                className="object-cover object-[center_80%]"
+              />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute bottom-0 p-5 text-white font-sans">
                 PEDICURE
