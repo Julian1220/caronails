@@ -9,7 +9,7 @@ const manicureAndShellacServices = [
       "Nägel werden in Form gebracht, die Hände in einem entspannenden Handbad verwöhnt und anschließend die Nagelhaut sanft entfernt. Eine abschließende Pflege sorgt für ein geschmeidiges, gepflegtes Hautgefühl.",
   },
   {
-    title: "Shellac – Lackierung neu",
+    title: "Shellac - Neulackierung",
     bullets: ["Preis: € 39"],
     description:
       "Eine Vielfalt an Farben, perfekter Halt ein makelloses Ergebnis - für Nägel, die lange schön bleiben.",

@@ -10,11 +10,13 @@ const pedicureAddOns = [
 function ServiceBlock({
   title,
   meta,
+  intro,
   lines,
   showDivider,
 }: {
   title: string;
   meta: string[];
+  intro: string;
   lines: string[];
   showDivider?: boolean;
 }) {
@@ -28,7 +30,13 @@ function ServiceBlock({
         {meta.join(" · ")}
       </div>
 
-      <ul className="mt-2 grid grid-cols-1 gap-y-1 gap-x-14 text-[13.5px] md:text-[14px] leading-[1.5] text-white/80 lg:grid-cols-2">
+      {/* ERSTER SATZ OHNE BULLETPOINT */}
+      <p className="mt-3 font-sans text-[13.5px] md:text-[14px] leading-[1.5] text-white/80">
+        {intro}
+      </p>
+
+      {/* REST MIT BULLETPOINTS */}
+      <ul className="mt-3 grid grid-cols-1 gap-y-1 text-[13.5px] md:text-[14px] leading-[1.5] text-white/80">
         {lines.map((line) => (
           <li key={line} className="flex items-start gap-2">
             <span className="mt-[6px] h-[4px] w-[4px] shrink-0 rounded-full bg-white/70" />
@@ -78,11 +86,10 @@ export default function PedicurePage() {
           </h2>
         </section>
 
-        {/* MAIN 1 (FIXED - NO CUTTING) */}
+        {/* MAIN 1 */}
         <section className="pb-10">
           <div className="overflow-hidden rounded-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              {/* IMAGE */}
               <div className="relative h-[360px] md:h-[420px] lg:h-auto">
                 <Image
                   src="/pedicure-picture1.jpeg"
@@ -92,46 +99,35 @@ export default function PedicurePage() {
                 />
               </div>
 
-              {/* TEXT */}
               <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
-                <div className="flex h-full items-start">
-                  <div className="space-y-6 w-full">
-                    <ServiceBlock
-                      title="Klassische Fußpflege"
-                      meta={["Preis: € 51", "ca. 45 Minuten"]}
-                      lines={[
-                        "Wohltuende Fußpflege zur Gesunderhaltung der Füße",
-                        "Angenehmes Fußbad",
-                        "Abtragen von Hornhaut, Rissen sowie Druckstellen",
-                        "Behandlung von Hühneraugen",
-                        "Fachgerechtes Kürzen und Formen der Nägel",
-                        "Behandlung eingewachsener oder verdickter Nägel",
-                        "Zurückschieben und Entfernen überschüssiger Nagelhaut",
-                        "Pflegende Abschlusspflege",
-                      ]}
-                      showDivider
-                    />
+                <ServiceBlock
+                  title="Klassische Fußpflege"
+                  meta={["Preis: € 51", "ca. 45 Minuten"]}
+                  intro="Wohltuende Fußpflege zur Gesunderhaltung der Füße"
+                  lines={[
+                    "Angenehmes Fußbad",
+                    "Abtragen von Hornhaut, Rissen sowie Druckstellen",
+                    "Behandlung von Hühneraugen",
+                    "Fachgerechtes Kürzen und Formen der Nägel",
+                    "Behandlung eingewachsener oder verdickter Nägel",
+                    "Zurückschieben und Entfernen überschüssiger Nagelhaut",
+                    "Abschlusspflege",
+                  ]}
+                  showDivider
+                />
 
-                    <ServiceBlock
-                      title="Diabetische Fußpflege"
-                      meta={["Preis: € 51"]}
-                      lines={[
-                        "Sanfte und sichere Fußpflege, speziell abgestimmt auf sensible Füße",
-                        "Schonendes Fußbad",
-                        "Sanftes Abtragen von Hornhaut",
-                        "Vorsichtiges Kürzen und Formen der Nägel",
-                        "Behandlung empfindlicher Druckstellen",
-                        "Pflegende Abschlusspflege",
-                      ]}
-                    />
-
-                    <a
-                      href="tel:+436764432882"
-                      className="inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[11px] tracking-[0.25em] text-white hover:brightness-95">
-                      JETZT BUCHEN
-                    </a>
-                  </div>
-                </div>
+                <ServiceBlock
+                  title="Diabetische Fußpflege"
+                  meta={["Preis: € 51"]}
+                  intro="Sanfte und sichere Fußpflege"
+                  lines={[
+                    "Schonendes Fußbad",
+                    "Sanftes Abtragen von Hornhaut",
+                    "Vorsichtiges Kürzen und Formen der Nägel",
+                    "Behandlung empfindlicher Druckstellen",
+                    "Abschlusspflege",
+                  ]}
+                />
               </div>
             </div>
           </div>
@@ -139,98 +135,42 @@ export default function PedicurePage() {
 
         {/* MAIN 2 */}
         <section className="pb-10">
-          <div className="overflow-hidden rounded-2xl">
-            <div className="grid grid-cols-1">
-              {/* TEXT */}
-              <div className="bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
-                <div className="flex h-full items-start">
-                  <div className="space-y-6">
-                    <ServiceBlock
-                      title="Fußpflege mit erhöhtem Aufwand"
-                      meta={["Preis: € 62", "ca. 60 Minuten"]}
-                      lines={[
-                        "Intensive Problembehandlung der Füße",
-                        "Starke Hornhaut",
-                        "Druckstellen & Hühneraugen",
-                        "Nagelkorrektur bei starken Problemen",
-                        "Pflegende Abschlusspflege",
-                      ]}
-                    />
+          <div className="overflow-hidden rounded-2xl bg-[#c9beb3] px-8 py-10 md:px-12 md:py-14 lg:px-14 lg:py-16">
+            <div className="flex flex-col lg:flex-row gap-10 items-start">
+              {/* LINKS */}
+              <div className="w-full lg:w-1/2 space-y-6">
+                <ServiceBlock
+                  title="Fußpflege mit erhöhtem Aufwand"
+                  meta={["Preis: € 62", "ca. 60 Minuten"]}
+                  intro="Diese Behandlung ist für Füße mit stärker ausgeprägten Problemstellungen, bei denen ein erhöhter Zeit- und Pflegeaufwand erforderlich ist."
+                  lines={[
+                    "Angenehmes Fußbad",
+                    "Entfernung stark verhornter Haut",
+                    "Behandlung ausgeprägter Druckstellen und Hühneraugen",
+                    "Fachgerechte Behandlung stark eingewachsener oder stark verdickter Nägel",
+                    "Abschlusspflege",
+                  ]}
+                />
+              </div>
 
-                    <div className="h-px w-full bg-white/15" />
+              {/* RECHTS */}
+              <div className="w-full lg:w-1/2">
+                <h3 className="font-sans text-[18px] md:text-[19px] font-medium text-white">
+                  Zusatzleistungen
+                </h3>
 
-                    <div>
-                      <h3 className="font-sans text-[18px] md:text-[19px] font-medium text-white">
-                        Zusatzleistungen
-                      </h3>
-
-                      <ul className="mt-3 space-y-2 text-[13.5px] md:text-[14px] text-white/80">
-                        {pedicureAddOns.map((a) => (
-                          <li key={a.title} className="flex gap-2">
-                            <span className="mt-[6px] h-[4px] w-[4px] rounded-full bg-white/70" />
-                            <span className="font-sans">
-                              {a.title} — {a.meta.join(" · ")}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <a
-                      href="tel:+436764432882"
-                      className="inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[11px] tracking-[0.25em] text-white hover:brightness-95">
-                      JETZT BUCHEN
-                    </a>
-                  </div>
-                </div>
+                <ul className="mt-3 space-y-2 text-[13.5px] md:text-[14px] text-white/80">
+                  {pedicureAddOns.map((a) => (
+                    <li key={a.title} className="flex gap-2">
+                      <span className="mt-[6px] h-[4px] w-[4px] rounded-full bg-white/70" />
+                      <span className="font-sans">
+                        {a.title} — {a.meta.join(" · ")}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="bg-[#c9beb3] mt-8 rounded-2xl px-6 py-10 md:px-10 md:py-12 lg:px-12">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="font-serif text-[2rem] md:text-[3rem] text-white">
-              Weitere Behandlungen
-            </h2>
-
-            <a
-              href="tel:+436764432882"
-              className="hidden md:inline-flex rounded-full bg-[#EA6E94] px-6 py-2 text-[10px] tracking-[0.25em] text-white">
-              JETZT BUCHEN
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <Link
-              href="/manicure"
-              className="relative h-[260px] overflow-hidden rounded-2xl">
-              <Image
-                src="/manicure-picture3.jpg"
-                alt=""
-                fill
-                className="object-cover object-[center_25%]"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute bottom-0 p-5 text-white font-sans">
-                MANICURE + SHELLAC
-              </div>
-            </Link>
-
-            <Link
-              href="/pedicure"
-              className="relative h-[260px] overflow-hidden rounded-2xl">
-              <Image
-                src="/pedicure-myservices3.jpg"
-                alt=""
-                fill
-                className="object-cover object-[center_80%]"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute bottom-0 p-5 text-white font-sans">
-                PEDICURE
-              </div>
-            </Link>
           </div>
         </section>
       </div>
